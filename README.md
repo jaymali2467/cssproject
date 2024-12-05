@@ -77,5 +77,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Name - [Jay Mali](https://www.your-site.com)
+- Linkedln - [Jay Mali]([https://www.twitter.com/yourusername](https://www.linkedin.com/in/jay-mali-9bb8b4267/))
