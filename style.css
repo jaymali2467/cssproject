@@ -1,0 +1,263 @@
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: var(--off-white);
+  color: var(--dark-grayish-blue);
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.nav-desktop ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-desktop a {
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-desktop a:hover {
+  color: var(--soft-red);
+}
+
+.menu-toggle,
+.nav-mobile {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.featured-article {
+  grid-column: span 2;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.article-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.featured-article h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--very-dark-blue);
+}
+
+.read-more {
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  border: none;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.read-more:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.new-articles {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  padding: 2rem;
+}
+
+.new-articles h2 {
+  color: var(--soft-orange);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.new-articles article {
+  padding: 1.5rem 0;
+}
+
+.new-articles h3 {
+  color: var(--off-white);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.new-articles p {
+  color: var(--grayish-blue);
+}
+
+.new-articles hr {
+  border: none;
+  border-top: 1px solid var(--dark-grayish-blue);
+  margin: 1rem 0;
+}
+
+.numbered-articles {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 2rem;
+}
+
+.numbered-article {
+  display: flex;
+  gap: 1rem;
+}
+
+.numbered-article img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+
+.numbered-article h3 {
+  color: var(--very-dark-blue);
+  margin: 0.5rem 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--very-dark-blue);
+    margin: 5px 0;
+  }
+
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    background-color: var(--off-white);
+    padding: 2rem;
+    z-index: 100;
+  }
+
+  .nav-mobile.active {
+    display: block;
+  }
+
+  .nav-mobile ul {
+    list-style: none;
+    margin-top: 4rem;
+  }
+
+  .nav-mobile li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-mobile a {
+    color: var(--very-dark-blue);
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-article {
+    grid-column: 1;
+  }
+
+  .article-content {
+    grid-template-columns: 1fr;
+  }
+
+  .numbered-articles {
+    grid-template-columns: 1fr;
+  }
+}
+/* ```
+
+This implementation:
+
+1. Uses semantic HTML5 elements
+2. Implements responsive design for mobile and desktop layouts
+3. Includes hover states for interactive elements
+4. Uses CSS Grid and Flexbox for layouts
+5. Follows the color scheme from the style guide
+6. Includes mobile menu functionality
+7. Uses placeholder images that can be replaced with actual assets
+8. Implements proper accessibility features */
