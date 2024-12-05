@@ -1,6 +1,6 @@
 # Frontend Mentor - News homepage solution
 
-This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
 
 ## Table of contents
 
@@ -44,36 +44,33 @@ For Mobile
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - Js
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```css proud of using variables to make it easier to edit the css
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
 }
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+function openMenu() {
+  navMobile.classList.add("active");
+  body.style.overflow = "hidden";
+  menuToggle.setAttribute("aria-expanded", "true");
+}
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Learn using flex and grid more efficently
+- Learn using react and express
 
 ## Author
 
