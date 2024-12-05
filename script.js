@@ -30,20 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Handle escape key
+  // Handles the escape key of the menu tab of mobile
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && navMobile.classList.contains("active")) {
       closeMenuHandler();
     }
   });
 
-  // Hide loader when page is fully loaded
+  // Hides my timepass loader after some time
   window.addEventListener("load", () => {
     setTimeout(() => {
       loader.classList.add("hidden");
       setTimeout(() => {
         loader.style.display = "none";
       }, 300);
-    }, 3000);
+    }, 2500);
   });
 });
