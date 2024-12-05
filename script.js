@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMobile = document.querySelector(".nav-mobile");
   const closeMenu = document.querySelector(".close-menu");
   const body = document.body;
+  const loader = document.getElementById("loader");
 
   function openMenu() {
     navMobile.classList.add("active");
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menuToggle.addEventListener("click", openMenu);
   closeMenu.addEventListener("click", closeMenuHandler);
 
-  // closes menu by clicking any space accept the menu in mobile version
+  // Close menu when clicking outside
   document.addEventListener("click", (event) => {
     if (
       !navMobile.contains(event.target) &&
@@ -29,10 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Handles the close menu in the mobile version of the page
+  // Handle escape key
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && navMobile.classList.contains("active")) {
       closeMenuHandler();
     }
+  });
+
+  // Hide loader when page is fully loaded
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loader.classList.add("hidden");
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 300);
+    }, 3000);
   });
 });
