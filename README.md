@@ -27,7 +27,8 @@ Users should be able to:
 
 For Desktop
 ![](assets/images/desktop-page.png)
-For
+For Mobile
+
 ![](assets/images/mobile-page.png)
 
 ### Links
