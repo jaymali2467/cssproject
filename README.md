@@ -78,4 +78,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Author
 
 - Name - [Jay Mali](https://www.your-site.com)
-- Linkedln - [Jay Mali]([https://www.twitter.com/yourusername](https://www.linkedin.com/in/jay-mali-9bb8b4267/))
+- Linkedln - [Jay Mali](https://www.linkedin.com/in/jay-mali-9bb8b4267/)
